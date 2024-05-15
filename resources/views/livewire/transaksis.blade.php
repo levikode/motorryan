@@ -22,7 +22,7 @@
                             <td>{{ $data->invoice }}</td>
                         </tr>
                         <tr>
-                            <th>Pelanggan</th>
+                            <th>Pembeli</th>
                             <th>:</th>
                             <td>{{ $data->pembeli->nama}}</td>
                         </tr>
@@ -34,7 +34,7 @@
                         <tr>
                             <th>Total</th>
                             <th>:</th>
-                            <td>@money($total)</td>
+                            <td>@money ($total)</td>
                         </tr>
                     </table>
                 </div>
@@ -103,9 +103,9 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $dt->produk->nama }}</td>
-                                <td>@money($dt->price)</td>
+                                <td>@money ($dt->price)</td>
                                 <td>{{ $dt->qty}}</td>
-                                <td>@money($dt->price * $dt->qty)</td>
+                                <td>@money ($dt->price * $dt->qty)</td>
                                 <td><button class="btn btn-sm btn-danger" wire:click="delete({{ $dt->id }})"><i class=" fas fa-trash"></i></a></td>
                             </tr>
                             @endforeach
@@ -122,7 +122,7 @@
                             <th>
                                     :
                             </th>
-                            <th><h2>@money($total)</h2>
+                            <th><h2>@money ($total)</h2>
                            
                             </th>
                         </tr>
@@ -145,7 +145,7 @@
                                     :
                             </th>
                             <th><h2>
-                            @money($kembali)</h2>
+                            @money ($kembali)</h2>
                             </th>
                         </tr>
                     </table>

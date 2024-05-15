@@ -37,14 +37,14 @@ body{
 <tr>
             <td>{{ $dod->produk->nama }}</td>
             <td>{{$dod->qty}}</td>
-            <td>@money($dod->price)</td>
-            <td>@money($dod->price*$dod->qty)</td>
+            <td>@money ($dod->price)</td>
+            <td>@money ($dod->price*$dod->qty)</td>
         </tr>
 
 @endforeach
 <tr>
     <td colspan="3">Total:</td>
-    <td>@money($dataTransaksi->total)</td>
+    <td>@money ($dataTransaksi->total)</td>
 </tr>
 </table>
 

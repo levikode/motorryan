@@ -38,7 +38,7 @@
                         <td>{{ $dt->nama }}</td>
              
                         <td>{{ $dt->stok }}</td>
-                        <td> {{($dt->price)}} </td>
+                        <td>@money($dt->price) </td>
                         <td> {{($dt->deskripsi)}} </td>
                         <td>
                             <div class="btn-group">

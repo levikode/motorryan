@@ -44,7 +44,7 @@ Route::get('penjualan',function(){
     return view('penjualan.index',[
         "title"=>"Penjualan"
     ]);
-})->name('Penjualan')->middleware('auth');
+})->name('penjualan')->middleware('auth');
 
 Route::get('transaksi',function(){
     return view('Penjualan.transaksis',[

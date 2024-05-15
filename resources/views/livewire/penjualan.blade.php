@@ -22,9 +22,9 @@
             @csrf
             <div class=" card-body">
                 <div class="form-group">
-                    <label for="nama">Pelanggan</label>
+                    <label for="nama">Pembeli</label>
                     <select class="form-control" wire:model="pembeli_id">
-                        <option hidden>--Pilih Pelanggan--</option>
+                        <option hidden>--Pilih Pembeli--</option>
                         @foreach($data as $dt )
                         <option value="{{ $dt->id }}">{{ $dt->nama }}</option>
                         @endforeach
@@ -43,5 +43,3 @@
 </div>
 </div>
 </div>
-
-

@@ -22,12 +22,12 @@ class Transaksis extends Component
 
     public function render()
     {
-        $transaksi = Transaksi::select('*')->where('user_id', '=', Auth::user()->id)->orderby('id', 'desc')->first();
+        $transaksi = Transaksi::select('*')->where('user_id', '=', Auth::user()->id)->orderBy('id', 'desc')->first();
         $this->total = $transaksi->total;
         $this->kembali = $this->uang - $this->total;
         return view('livewire.transaksis')
             ->with("data", $transaksi)
-            ->with("dataProduk", Produk::where('stock', '>', '0')->get())
+            ->with("dataProduk", Produk::where('stok', '>', '0')->get())
             ->with("dataDetiltransaksi", Detiltransaksi::where('transaksi_id', '=', $transaksi->id)->get());
     }
 
@@ -36,7 +36,7 @@ class Transaksis extends Component
         $this->validate([
             'produk_id' => 'required'
         ]);
-        $transaksi = Transaksi::select('*')->where('user_id', '=', Auth::user()->id)->orderby('id', 'desc')->first();
+        $transaksi = Transaksi::select('*')->where('user_id', '=', Auth::user()->id)->orderBy('id', 'desc')->first();
         $this->transaksi_id = $transaksi->id;
         $produk = Produk::where('id', '=', $this->produk_id)->get();
         $harga = $produk[0]->price;

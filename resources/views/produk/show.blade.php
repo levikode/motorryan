@@ -33,7 +33,7 @@
                 <tr>
                     <th>Harga</th>
                     <td>:</td>
-                    <td>@money($data[0]->price)</td>
+                    <td>@money ($data[0]->price)</td>
                 </tr>
                 <tr>
                     <th>Deskripsi</th>
