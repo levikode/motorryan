@@ -12,7 +12,7 @@
 <div class="col-md-12">
     <div class="card card-info">
         <div class="card-header">
-            <h2 class="card-title">Data Pelanggan</h2>
+            <h2 class="card-title">Data Produk</h2>
             <a type="button" class="btn btn-success float-right" href="{{route('produk.create') }}">
                 <i class=" fas fa-plus"></i> Tambah Produk
             </a>
