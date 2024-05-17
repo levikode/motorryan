@@ -21,13 +21,13 @@ Route::get('/',function(){
     return view('welcome',[
         "title"=>"Dashboard"
     ]);
-});
+})->middleware('auth');
  
 
 Route::resource('pengguna',UserController::class)
 ->except('destroy','create','show','upadate','edit')->middleware('auth');
 
-Route::resource('produk',ProdukController::class);
+Route::resource('produk',ProdukController::class)->middleware('auth');
 
 
 
@@ -38,7 +38,7 @@ Route::get('login',[LoginController::class,'loginView'])->name('login');
 
 Route::post('login',[LoginController::class,'authenticate']);
 
-Route::post('logout',[LoginController::class,'loginView'])->name('auth.logout');
+Route::post('logout',[LoginController::class,'logout'])->name('auth.logout')->middleware('auth');
   
 Route::get('penjualan',function(){
     return view('penjualan.index',[
