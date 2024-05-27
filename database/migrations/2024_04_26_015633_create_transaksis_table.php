@@ -20,11 +20,11 @@ return new class extends Migration
             $table->timestamps();
         });
 
-Schema::table('transaksis',function(Blueprint $table){
+        Schema::table('transaksis', function (Blueprint $table) {
             $table->foreign('pembeli_id')->references('id')->on('pembelis')
-            ->onUpdate('cascade')->onDelete('cascade');
+                ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')
-            ->onUpdate('cascade')->onDelete('cascade');
+                ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -34,22 +34,22 @@ Schema::table('transaksis',function(Blueprint $table){
      */
     public function down(): void
     {
-        Schema::table('transaksis', function(Blueprint $table) {
+        Schema::table('transaksis', function (Blueprint $table) {
             $table->dropForeign('transaksi_pembeli_id_foreign');
         });
 
-        Schema::table('transaksis', function(Blueprint $table) {
+        Schema::table('transaksis', function (Blueprint $table) {
             $table->dropIndex('transaksis_pembeli_id_foreign');
         });
 
-        Schema::table('transaksis', function(Blueprint $table) {
+        Schema::table('transaksis', function (Blueprint $table) {
             $table->dropForeign('transaksis_user_id_foreign');
         });
 
-        Schema::table('transaksis', function(Blueprint $table) {
+        Schema::table('transaksis', function (Blueprint $table) {
             $table->dropIndex('transaksi_user_id_foreign');
         });
-              
+
         Schema::dropIfExists('transaksis');
     }
 };
