@@ -21,7 +21,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary" style="background:transparent; border: 2px solid rgba(270, 270, 270, .5); backdrop-filter:blur(2px); color:#fff; border-radius: 20px;">
       <div class="card-header text-center">
-        <h1 class="h1">Aplikasi<b>POS</b></h1>
+        <h1 class="h1"><b>Shoowroom motor</b></h1>
       </div>
       <div class="card-body">
         <p class="login-box-msg">Please Login</p>
