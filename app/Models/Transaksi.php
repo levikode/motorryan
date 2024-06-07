@@ -18,6 +18,11 @@ class Transaksi extends Model
         return $this->hasMany(Detiltransaksi::class);
     }
 
+    public function user():BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function pembeli():BelongsTo
     {
         return $this->belongsTo(Pembeli::class);

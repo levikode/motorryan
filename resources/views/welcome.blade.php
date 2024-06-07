@@ -186,7 +186,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $dt->pembeli->nama }}</td>
-                        <td>{{ $dt->total }}</td>
+                        <td> @money($dt->total) </td>
                         
                     </tr>
 

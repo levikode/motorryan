@@ -15,11 +15,14 @@
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 </head>
 
-<body class="hold-transition login-page" style="background-image: url('1.jpg'); background-size: cover;">
+<body class="hold-transition login-page" style="width: 100%; height: 100vh;">
+<video autoplay loop muted style="padding: 0; margin: 0; box-sizing: border-box; position: absolute; object-fit: cover; width: 100%; height: 100%;">
+  <source src="{{ asset('dist/img/vidio.mp4')}}">
+</video>
 
   <div class="login-box" >
     <!-- /.login-logo -->
-    <div class="card card-outline card-primary" style="background:transparent; border: 2px solid rgba(270, 270, 270, .5); backdrop-filter:blur(2px); color:#fff; border-radius: 20px;">
+    <div class="card card-outline card-primary" style="background:transparent; border: 2px solid rgba(270, 270, 270, .5);  color:#fff; border-radius: 20px;">
       <div class="card-header text-center">
         <h1 class="h1"><b>Shoowroom motor</b></h1>
       </div>

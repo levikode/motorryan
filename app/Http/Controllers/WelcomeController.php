@@ -17,7 +17,7 @@ class WelcomeController extends Controller
         $produk = Produk::count();
         $pembeli = Pembeli::count();
         $user = User::count();
-        $dataTansaksi = Transaksi::count();
+        $datatransaksi = Transaksi::count();
 
         $tanggal_awal = date('Y-m-01');
         $tanggal_akhir = date('Y-m-d');
